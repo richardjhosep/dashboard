@@ -1,0 +1,2499 @@
+@charset "UTF-8";
+/*!
+* ¡ATENCIÓN! Hoja de estilos generada con SASS, no modificar.
+*/
+/* line 5, gulp-files/scss/estilos/base/general.scss */
+:root {
+  --header: 90px;
+  --marco: 1280px;
+  --marco-big: 1700px;
+}
+
+@media (max-width: 767px) {
+  /* line 5, gulp-files/scss/estilos/base/general.scss */
+  :root {
+    --header: 65px
+  ;
+  }
+}
+
+/* line 14, gulp-files/scss/estilos/base/general.scss */
+body {
+  padding-top: 90px;
+}
+
+@supports (--css: variables) {
+  /* line 14, gulp-files/scss/estilos/base/general.scss */
+  body {
+    padding-top: var(--header);
+  }
+}
+
+/* line 21, gulp-files/scss/estilos/base/general.scss */
+.marco {
+  max-width: 1280px;
+  margin: auto;
+}
+
+@supports (--css: variables) {
+  /* line 21, gulp-files/scss/estilos/base/general.scss */
+  .marco {
+    max-width: var(--marco);
+  }
+}
+
+/* line 29, gulp-files/scss/estilos/base/general.scss */
+.section {
+  position: relative;
+}
+
+/* line 33, gulp-files/scss/estilos/base/general.scss */
+.btn-subir {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #333;
+  font-size: 3rem;
+  color: white;
+  cursor: pointer;
+  position: fixed;
+  right: 0;
+  bottom: 100px;
+  z-index: 9999;
+  visibility: hidden;
+  opacity: 0;
+  transition: all ease 200ms;
+}
+
+/* line 50, gulp-files/scss/estilos/base/general.scss */
+.btn-subir--activo {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 543px) {
+  /* line 33, gulp-files/scss/estilos/base/general.scss */
+  .btn-subir {
+    bottom: 130px;
+  }
+}
+
+/* line 59, gulp-files/scss/estilos/base/general.scss */
+.tippy-tooltip {
+  background: #A6ADB2;
+  font-size: 1.4em;
+  padding: 10px;
+  border-radius: 10px;
+  font-weight: 300;
+}
+
+/* line 67, gulp-files/scss/estilos/base/general.scss */
+.tippy-popper[x-placement^=bottom] .tippy-arrow {
+  border-bottom-color: #A6ADB2;
+}
+
+/* line 71, gulp-files/scss/estilos/base/general.scss */
+.btn {
+  border-radius: 0;
+  margin-bottom: 5px;
+  font-weight: 300;
+  font-size: 1.7em;
+}
+
+@media (max-width: 543px) {
+  /* line 71, gulp-files/scss/estilos/base/general.scss */
+  .btn {
+    width: 100%;
+  }
+}
+
+/* line 79, gulp-files/scss/estilos/base/general.scss */
+.btn--neutro {
+  position: relative;
+}
+
+/* line 81, gulp-files/scss/estilos/base/general.scss */
+.btn--neutro input {
+  cursor: pointer;
+  position: absolute;
+  top: -24px;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 4;
+  opacity: 0;
+  width: 100%;
+}
+
+/* line 96, gulp-files/scss/estilos/base/general.scss */
+.alerta--error {
+  color: #a91e12;
+  background: #f7b5af;
+}
+
+/* line 103, gulp-files/scss/estilos/base/general.scss */
+.respuestas__item {
+  min-height: 470px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-direction: column;
+  transition: .3s linear;
+  opacity: 0;
+}
+
+/* line 111, gulp-files/scss/estilos/base/general.scss */
+.respuestas__item.observar--activo {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  /* line 103, gulp-files/scss/estilos/base/general.scss */
+  .respuestas__item {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 103, gulp-files/scss/estilos/base/general.scss */
+  .respuestas__item {
+    margin-bottom: 40px;
+  }
+}
+
+/* line 121, gulp-files/scss/estilos/base/general.scss */
+.respuestas__icon {
+  text-align: center;
+}
+
+/* line 123, gulp-files/scss/estilos/base/general.scss */
+.respuestas__icon span {
+  font-size: 5em;
+  color: #2a3a47;
+}
+
+/* line 128, gulp-files/scss/estilos/base/general.scss */
+.respuestas__texto {
+  text-align: center;
+  margin-bottom: 30px;
+  max-width: 700px;
+}
+
+/* line 132, gulp-files/scss/estilos/base/general.scss */
+.respuestas__texto h2 {
+  margin: 0;
+  margin-bottom: 30px;
+  color: #2a3a47;
+}
+
+/* line 137, gulp-files/scss/estilos/base/general.scss */
+.respuestas__texto p {
+  font-weight: 300;
+  color: #2a3a47;
+  font-size: 1.7em;
+}
+
+/* line 143, gulp-files/scss/estilos/base/general.scss */
+.respuestas__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 150, gulp-files/scss/estilos/base/general.scss */
+select#relacion-sartor {
+  padding-right: 30px;
+  text-overflow: ellipsis;
+}
+
+/* line 155, gulp-files/scss/estilos/base/general.scss */
+.modal {
+  background: white;
+  padding: 30px;
+  text-align: left;
+  max-width: 1100px;
+  margin: 40px auto;
+  position: relative;
+  max-height: 600px;
+  overflow-y: scroll;
+}
+
+@media (max-width: 767px) {
+  /* line 155, gulp-files/scss/estilos/base/general.scss */
+  .modal {
+    max-height: 550px;
+  }
+}
+
+/* line 167, gulp-files/scss/estilos/base/general.scss */
+.modal--home {
+  max-height: initial;
+  overflow-y: hidden;
+}
+
+/* line 170, gulp-files/scss/estilos/base/general.scss */
+.modal--home li {
+  padding-left: 15px;
+}
+
+/* line 174, gulp-files/scss/estilos/base/general.scss */
+.modal h4 {
+  font-size: 2em;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #243746;
+}
+
+/* line 180, gulp-files/scss/estilos/base/general.scss */
+.modal p {
+  font-size: 1.6em;
+  font-weight: 300;
+  margin-bottom: 15px;
+  color: #2a3a47;
+}
+
+/* line 185, gulp-files/scss/estilos/base/general.scss */
+.modal p.modal__pregunta {
+  font-weight: 400;
+  margin-bottom: 10px;
+}
+
+/* line 190, gulp-files/scss/estilos/base/general.scss */
+.modal ul {
+  list-style-type: none;
+  margin-bottom: 10px;
+}
+
+/* line 193, gulp-files/scss/estilos/base/general.scss */
+.modal ul li {
+  position: relative;
+  color: #2a3a47;
+  font-weight: 300;
+  font-size: 1.6em;
+  margin-bottom: 6px;
+}
+
+/* line 200, gulp-files/scss/estilos/base/general.scss */
+.modal ul li:before {
+  content: '';
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: #ec7700;
+  top: 8px;
+  left: 0;
+}
+
+/* line 212, gulp-files/scss/estilos/base/general.scss */
+.modal__lista li {
+  padding-left: 0;
+}
+
+/* line 215, gulp-files/scss/estilos/base/general.scss */
+.modal__lista__lista {
+  font-size: 1rem;
+  margin-top: 15px;
+}
+
+/* line 220, gulp-files/scss/estilos/base/general.scss */
+.modal__lista--uno li {
+  padding-left: 15px;
+}
+
+/* line 227, gulp-files/scss/estilos/base/general.scss */
+.modal__lista--dos li, .modal__lista--tres li, .modal__lista--cuatro li {
+  padding-left: 0;
+  display: flex;
+}
+
+/* line 230, gulp-files/scss/estilos/base/general.scss */
+.modal__lista--dos li:before, .modal__lista--tres li:before, .modal__lista--cuatro li:before {
+  display: none;
+}
+
+/* line 234, gulp-files/scss/estilos/base/general.scss */
+.modal__lista--dos span, .modal__lista--tres span, .modal__lista--cuatro span {
+  color: #ec7700;
+  font-weight: 500;
+  margin-right: 5px;
+}
+
+/* line 241, gulp-files/scss/estilos/base/general.scss */
+.modal__lista--tres li {
+  display: block;
+}
+
+/* line 244, gulp-files/scss/estilos/base/general.scss */
+.modal__lista--tres .modal__lista__lista {
+  padding-left: 15px;
+}
+
+/* line 249, gulp-files/scss/estilos/base/general.scss */
+.modal__link {
+  text-decoration: none;
+  outline: 0;
+  color: #EC6300;
+}
+
+/* line 253, gulp-files/scss/estilos/base/general.scss */
+.modal__link:hover {
+  text-decoration: underline;
+}
+
+/* line 259, gulp-files/scss/estilos/base/general.scss */
+.representante {
+  margin-bottom: 20px;
+}
+
+@media (max-width: 991px) {
+  /* line 259, gulp-files/scss/estilos/base/general.scss */
+  .representante {
+    margin: 10px 20px;
+  }
+}
+
+/* line 264, gulp-files/scss/estilos/base/general.scss */
+.representante.invalido {
+  border: 1px solid #ea5233;
+}
+
+/* line 267, gulp-files/scss/estilos/base/general.scss */
+.representante--paso6 {
+  padding: 20px 0;
+}
+
+@media (max-width: 991px) {
+  /* line 267, gulp-files/scss/estilos/base/general.scss */
+  .representante--paso6 {
+    margin: 10px 20px;
+  }
+}
+
+/* line 275, gulp-files/scss/estilos/base/general.scss */
+.cabecera {
+  display: block;
+  font-size: 1.7rem;
+  font-weight: 300;
+  padding: 25px;
+  margin-bottom: 1px;
+  color: #333333;
+  cursor: pointer;
+  transition: all ease 200ms;
+  transition-delay: 200ms;
+  border-radius: 0;
+  outline: 0;
+}
+
+/* line 290, gulp-files/scss/estilos/base/general.scss */
+.cabecera:hover .desplegable__editar {
+  color: #EC6300;
+}
+
+/* line 294, gulp-files/scss/estilos/base/general.scss */
+.bloque_desplegable {
+  margin-bottom: 10px;
+  border: 1px solid #C5CACD;
+}
+
+/* line 297, gulp-files/scss/estilos/base/general.scss */
+.bloque_desplegable.invalido {
+  border: 1px solid #ea5233;
+}
+
+/* line 302, gulp-files/scss/estilos/base/general.scss */
+.contenido.fila {
+  padding: 0 25px 40px 25px;
+}
+
+/* line 306, gulp-files/scss/estilos/base/general.scss */
+.desplegable__cabecera .ui-icon {
+  float: right;
+  font-size: 18px;
+  transition: all ease 200ms;
+}
+
+/* line 312, gulp-files/scss/estilos/base/general.scss */
+.desplegable__contenido {
+  display: none;
+  padding: 30px;
+  background: #F0F4F4;
+  /* box-shadow: 0 6px 12px rgba(51, 51, 51, 0.2); */
+  position: relative;
+  border-radius: 0;
+  margin-bottom: 20px;
+}
+
+/* line 322, gulp-files/scss/estilos/base/general.scss */
+.desplegable__contenido p {
+  font-size: 1.6rem;
+  font-weight: 300;
+  color: #333;
+}
+
+/* line 328, gulp-files/scss/estilos/base/general.scss */
+.desplegable__cabecera__interior {
+  display: flex;
+  align-items: center;
+}
+
+/* line 333, gulp-files/scss/estilos/base/general.scss */
+.desplegable__cabecera__texto {
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 340, gulp-files/scss/estilos/base/general.scss */
+.desplegable__cabecera__icons {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+/* line 347, gulp-files/scss/estilos/base/general.scss */
+.desplegable__editar {
+  font-size: 2.8rem;
+}
+
+/* line 351, gulp-files/scss/estilos/base/general.scss */
+.desplegable__borrar {
+  text-decoration: none;
+  outline: 0;
+  color: #333;
+  transition: all ease 300ms;
+}
+
+/* line 358, gulp-files/scss/estilos/base/general.scss */
+.desplegable__borrar:hover {
+  color: #EC6300;
+}
+
+/* line 362, gulp-files/scss/estilos/base/general.scss */
+.desplegable__borrar span {
+  font-size: 2.8rem;
+}
+
+/* line 366, gulp-files/scss/estilos/base/general.scss */
+.desplegable__cabecera__texto p {
+  color: #333;
+}
+
+/* line 370, gulp-files/scss/estilos/base/general.scss */
+.contenido__borrar {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  /* line 375, gulp-files/scss/estilos/base/general.scss */
+  .desplegable__cabecera__texto p {
+    font-size: 1.4rem;
+  }
+}
+
+@media (max-width: 600px) {
+  /* line 381, gulp-files/scss/estilos/base/general.scss */
+  .desplegable__cabecera__texto {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  /* line 385, gulp-files/scss/estilos/base/general.scss */
+  .desplegable__cabecera__texto p {
+    font-size: 1.5rem;
+  }
+}
+
+/* line 390, gulp-files/scss/estilos/base/general.scss */
+.error {
+  display: block;
+  position: relative;
+  margin-top: 10px;
+  padding: 10px;
+  background: #efa3a3;
+  font-size: 1.5em;
+  color: #9c4242;
+  text-align: center;
+}
+
+/* line 1, gulp-files/scss/estilos/estructura/header.scss */
+.header {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  background: white;
+  height: 90px;
+  z-index: 9999;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 0 0 2rem;
+  box-shadow: 0 0 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+@supports (--css: variables) {
+  /* line 1, gulp-files/scss/estilos/estructura/header.scss */
+  .header {
+    height: var(--header);
+  }
+}
+
+/* line 14, gulp-files/scss/estilos/estructura/header.scss */
+.header__container {
+  height: var(--header);
+  width: 100%;
+  max-width: var(--marco-big);
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 23, gulp-files/scss/estilos/estructura/header.scss */
+.header__container__item--logo {
+  width: 172px;
+  height: 50px;
+}
+
+@media (max-width: 991px) {
+  /* line 29, gulp-files/scss/estilos/estructura/header.scss */
+  .header__item {
+    height: 100%;
+  }
+}
+
+/* line 33, gulp-files/scss/estilos/estructura/header.scss */
+.header__item--logo {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+/* line 38, gulp-files/scss/estilos/estructura/header.scss */
+.header__item--logo img {
+  display: block;
+  width: 133px;
+  margin-right: 3rem;
+}
+
+@media (max-width: 1399px) {
+  /* line 44, gulp-files/scss/estilos/estructura/header.scss */
+  .header__item--user {
+    margin-left: auto;
+    margin-right: 0;
+  }
+}
+
+/* line 50, gulp-files/scss/estilos/estructura/header.scss */
+.header__item--burger {
+  margin-left: 1.5rem;
+}
+
+/* line 52, gulp-files/scss/estilos/estructura/header.scss */
+.header__item--burger svg {
+  fill: #2A3A47;
+}
+
+/* line 57, gulp-files/scss/estilos/estructura/header.scss */
+.header__item--hazte a {
+  text-decoration: none;
+  height: 100%;
+  background: #aec2cc;
+  padding: 20px;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  /* line 57, gulp-files/scss/estilos/estructura/header.scss */
+  .header__item--hazte a {
+    padding: 15px;
+  }
+}
+
+/* line 69, gulp-files/scss/estilos/estructura/header.scss */
+.header__item--acceso a {
+  text-decoration: none;
+  height: 100%;
+  background: #c03;
+  padding: 20px;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  /* line 69, gulp-files/scss/estilos/estructura/header.scss */
+  .header__item--acceso a {
+    padding: 15px;
+  }
+}
+
+/* line 79, gulp-files/scss/estilos/estructura/header.scss */
+.header__item--acceso img {
+  width: 34px;
+}
+
+/* line 84, gulp-files/scss/estilos/estructura/header.scss */
+.header__text {
+  font-size: 3.2rem;
+  font-style: italic;
+  font-weight: 600;
+  color: white;
+}
+
+/* line 89, gulp-files/scss/estilos/estructura/header.scss */
+.header__text span {
+  font-weight: 300;
+}
+
+/* line 93, gulp-files/scss/estilos/estructura/header.scss */
+.header__link {
+  margin-right: 12px;
+}
+
+/* line 95, gulp-files/scss/estilos/estructura/header.scss */
+.header__link:last-child {
+  margin-right: 0;
+}
+
+/* line 99, gulp-files/scss/estilos/estructura/header.scss */
+.header__fonos {
+  display: flex;
+  align-items: center;
+  padding-right: 20px;
+}
+
+/* line 103, gulp-files/scss/estilos/estructura/header.scss */
+.header__fonos a {
+  text-decoration: none;
+  font-size: 1.5em;
+  color: #2A3A47;
+  opacity: 1;
+  transition: all ease 200ms;
+}
+
+/* line 109, gulp-files/scss/estilos/estructura/header.scss */
+.header__fonos a:hover {
+  opacity: .7;
+}
+
+/* line 113, gulp-files/scss/estilos/estructura/header.scss */
+.header__fonos span {
+  font-size: 1.8em;
+  margin: 0 10px;
+  position: relative;
+  top: -1px;
+  color: #2A3A47;
+}
+
+/* line 123, gulp-files/scss/estilos/estructura/header.scss */
+.header-user {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #CC0033;
+  transition: all ease 200ms;
+  height: 100%;
+}
+
+/* line 130, gulp-files/scss/estilos/estructura/header.scss */
+.header-user:hover {
+  background: rgba(204, 0, 51, 0.8);
+}
+
+/* line 135, gulp-files/scss/estilos/estructura/header.scss */
+.header-user--acceso-clientes img {
+  width: 22px;
+  margin-right: 10px;
+}
+
+/* line 140, gulp-files/scss/estilos/estructura/header.scss */
+.header-user__item {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-size: 1.6rem;
+  color: white;
+  padding: 5px 20px;
+  transition: all ease 200ms;
+  background: #AEC2CC;
+  height: 100%;
+  width: 100%;
+}
+
+/* line 151, gulp-files/scss/estilos/estructura/header.scss */
+.header-user__item span {
+  padding-left: 10px;
+}
+
+/* line 154, gulp-files/scss/estilos/estructura/header.scss */
+.header-user__item:hover {
+  background: #a2bcca;
+}
+
+/* line 157, gulp-files/scss/estilos/estructura/header.scss */
+.header-user__item.hazte-cliente {
+  background: #AEC2CC;
+}
+
+/* line 159, gulp-files/scss/estilos/estructura/header.scss */
+.header-user__item.hazte-cliente:hover {
+  background: #c2d3dc;
+}
+
+/* line 163, gulp-files/scss/estilos/estructura/header.scss */
+.header-user__item.acceso-clientes {
+  background: #CC0033;
+}
+
+/* line 165, gulp-files/scss/estilos/estructura/header.scss */
+.header-user__item.acceso-clientes:hover {
+  background: #e0194b;
+}
+
+/* line 1, gulp-files/scss/estilos/estructura/footer.scss */
+.footer {
+  position: relative;
+  background: #E3E3E3;
+  z-index: 9999;
+}
+
+/* line 5, gulp-files/scss/estilos/estructura/footer.scss */
+.footer__top {
+  padding: 6rem 1.5rem 3rem;
+}
+
+@media (max-width: 991px) {
+  /* line 5, gulp-files/scss/estilos/estructura/footer.scss */
+  .footer__top {
+    padding: 3rem 1.5rem;
+  }
+}
+
+/* line 11, gulp-files/scss/estilos/estructura/footer.scss */
+.footer__logo {
+  display: flex;
+  width: 172px;
+  height: 50px;
+}
+
+@media (max-width: 767px) {
+  /* line 11, gulp-files/scss/estilos/estructura/footer.scss */
+  .footer__logo {
+    margin: auto;
+    margin-bottom: 30px;
+  }
+}
+
+/* line 20, gulp-files/scss/estilos/estructura/footer.scss */
+.footer__fonos {
+  text-align: right;
+}
+
+@media (max-width: 767px) {
+  /* line 20, gulp-files/scss/estilos/estructura/footer.scss */
+  .footer__fonos {
+    text-align: center;
+  }
+}
+
+/* line 25, gulp-files/scss/estilos/estructura/footer.scss */
+.footer__fonos p {
+  color: #2A3A47;
+}
+
+/* line 28, gulp-files/scss/estilos/estructura/footer.scss */
+.footer__fonos__interior {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+@media (max-width: 767px) {
+  /* line 28, gulp-files/scss/estilos/estructura/footer.scss */
+  .footer__fonos__interior {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 543px) {
+  /* line 28, gulp-files/scss/estilos/estructura/footer.scss */
+  .footer__fonos__interior {
+    flex-direction: column;
+  }
+}
+
+/* line 38, gulp-files/scss/estilos/estructura/footer.scss */
+.footer__fonos__interior p, .footer__fonos__interior span {
+  color: #2A3A47;
+}
+
+/* line 41, gulp-files/scss/estilos/estructura/footer.scss */
+.footer__fonos__interior p {
+  margin-right: 10px;
+}
+
+@media (max-width: 543px) {
+  /* line 41, gulp-files/scss/estilos/estructura/footer.scss */
+  .footer__fonos__interior p {
+    margin-right: 0;
+    margin-bottom: 5px;
+  }
+}
+
+/* line 48, gulp-files/scss/estilos/estructura/footer.scss */
+.footer__fonos__interior span {
+  font-size: 1.6em;
+  margin: 0 5px;
+  position: relative;
+  top: -1px;
+}
+
+@media (max-width: 543px) {
+  /* line 48, gulp-files/scss/estilos/estructura/footer.scss */
+  .footer__fonos__interior span {
+    display: none;
+  }
+}
+
+/* line 59, gulp-files/scss/estilos/estructura/footer.scss */
+.footer__call {
+  font-size: 1.4em;
+  text-decoration: none;
+  color: #2A3A47;
+  transition: all ease 200ms;
+}
+
+@media (max-width: 543px) {
+  /* line 59, gulp-files/scss/estilos/estructura/footer.scss */
+  .footer__call {
+    font-size: 1.5em;
+    margin-bottom: 5px;
+  }
+}
+
+/* line 68, gulp-files/scss/estilos/estructura/footer.scss */
+.footer__call:hover {
+  opacity: .6;
+}
+
+/* line 72, gulp-files/scss/estilos/estructura/footer.scss */
+.footer .footer__bottom {
+  background: rgba(42, 58, 71, 0.2);
+  padding: 1.5rem;
+}
+
+/* line 75, gulp-files/scss/estilos/estructura/footer.scss */
+.footer .footer__bottom__legal {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 845px) {
+  /* line 75, gulp-files/scss/estilos/estructura/footer.scss */
+  .footer .footer__bottom__legal {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+/* line 84, gulp-files/scss/estilos/estructura/footer.scss */
+.footer .footer__bottom p {
+  color: #2A3A47;
+  font-size: 1.4em;
+  font-weight: 300;
+}
+
+@media (max-width: 415px) {
+  /* line 88, gulp-files/scss/estilos/estructura/footer.scss */
+  .footer .footer__bottom p span {
+    display: block;
+  }
+}
+
+@supports (--css: variables) {
+  /* line 4, gulp-files/scss/estilos/components/menu.scss */
+  .menu__megamenu {
+    width: 100%;
+    max-width: var(--marco);
+  }
+}
+
+/* line 10, gulp-files/scss/estilos/components/menu.scss */
+.menu {
+  display: flex;
+  margin: auto;
+  margin-right: 0;
+  height: 95px;
+}
+
+/* line 16, gulp-files/scss/estilos/components/menu.scss */
+.menu__link {
+  height: 95px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #606060;
+  font-size: 1.7rem;
+  padding: 1rem 2rem;
+  font-weight: 300;
+  transition: all ease 200ms;
+}
+
+/* line 28, gulp-files/scss/estilos/components/menu.scss */
+.menu__link--mail {
+  background: #10B5AC;
+}
+
+/* line 30, gulp-files/scss/estilos/components/menu.scss */
+.menu__link--mail:hover {
+  background: #0ca9a0 !important;
+}
+
+/* line 37, gulp-files/scss/estilos/components/menu.scss */
+.menu__item:hover .menu__link {
+  background: #E7454E;
+  color: white;
+}
+
+/* line 41, gulp-files/scss/estilos/components/menu.scss */
+.menu__item:hover .menu__megamenu {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* line 46, gulp-files/scss/estilos/components/menu.scss */
+.menu__item:nth-child(7) {
+  background: #E7454E;
+  transition: all ease 200ms;
+}
+
+/* line 50, gulp-files/scss/estilos/components/menu.scss */
+.menu__item:nth-child(7):hover .menu__link {
+  background: rgba(204, 0, 51, 0.5);
+}
+
+/* line 62, gulp-files/scss/estilos/components/menu.scss */
+.menu__megamenu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  left: 0;
+  background: #4C5A81;
+  width: 1280px;
+  margin: auto;
+  padding: 5rem;
+  opacity: 0;
+  visibility: hidden;
+  transition: all ease 200ms;
+  transition-delay: 200ms;
+  display: flex;
+  align-items: center;
+}
+
+/* line 77, gulp-files/scss/estilos/components/menu.scss */
+.menu__megamenu__icon {
+  margin-right: 5rem;
+}
+
+/* line 79, gulp-files/scss/estilos/components/menu.scss */
+.menu__megamenu__icon img {
+  width: 140px;
+  display: block;
+}
+
+/* line 84, gulp-files/scss/estilos/components/menu.scss */
+.menu__megamenu__title {
+  font-size: 2.8rem;
+  color: white;
+}
+
+/* line 88, gulp-files/scss/estilos/components/menu.scss */
+.menu__megamenu__row {
+  display: flex;
+  margin: 0 -3rem;
+}
+
+/* line 92, gulp-files/scss/estilos/components/menu.scss */
+.menu__megamenu__col {
+  padding: 0 3rem;
+}
+
+/* line 95, gulp-files/scss/estilos/components/menu.scss */
+.menu__megamenu__link {
+  display: block;
+  font-size: 1.7rem;
+  color: #F93549;
+  text-decoration: none;
+  padding: 1rem 0;
+  font-weight: 300;
+}
+
+/* line 1, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 2, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 98;
+  visibility: hidden;
+  display: flex;
+  justify-content: flex-end;
+}
+
+@media (min-width: 1400px) {
+  /* line 1, gulp-files/scss/estilos/components/menu-responsive.scss */
+  /* line 16, gulp-files/scss/estilos/components/menu-responsive.scss */
+  .menu-responsive {
+    display: none;
+  }
+}
+
+/* line 11, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 22, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive__overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: transparent;
+}
+
+/* line 15, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 32, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive__container {
+  width: 100%;
+  max-width: 360px;
+  background: white;
+  margin-top: 90px;
+  transform: translateX(100%);
+  transition: all ease 200ms;
+}
+
+@supports (--css: variables) {
+  /* line 15, gulp-files/scss/estilos/components/menu-responsive.scss */
+  /* line 43, gulp-files/scss/estilos/components/menu-responsive.scss */
+  .menu-responsive__container {
+    margin-top: var(--header);
+  }
+}
+
+/* line 25, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 49, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive__container > ul {
+  padding: 1.5rem 0;
+}
+
+/* line 29, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 54, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive--active {
+  visibility: visible;
+}
+
+/* line 31, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 59, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive--active .menu-responsive__container {
+  transform: translateX(0);
+}
+
+/* line 34, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 64, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive--active .menu-responsive__overlay {
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* line 38, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 69, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive__icon {
+  display: flex;
+}
+
+/* line 40, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 74, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive__icon svg {
+  margin-right: 10px;
+}
+
+/* line 45, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 79, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive li a {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 1rem;
+  font-size: 1.7rem;
+  text-decoration: none;
+  color: #F93549;
+  background: white;
+  font-weight: 300;
+}
+
+/* line 55, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 92, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive li a:focus {
+  outline: 0;
+}
+
+/* line 58, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 97, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive li a.ui-accordion-header {
+  flex-direction: row-reverse;
+}
+
+/* line 63, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 102, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive li .submenu--dos a {
+  color: white;
+  background: #F93549;
+}
+
+/* line 69, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 108, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive li .submenu--tres a {
+  color: white;
+  background: #c72a3a;
+}
+
+/* line 75, gulp-files/scss/estilos/components/menu-responsive.scss */
+/* line 114, gulp-files/scss/estilos/components/menu-responsive.scss */
+.menu-responsive li a.ui-accordion-header-active, .menu-responsive li a.activo {
+  background: #333D47;
+  color: white;
+}
+
+/* line 1, gulp-files/scss/estilos/modulos/intro.scss */
+.intro {
+  position: relative;
+  background: url("/haztecliente-pj/img/fondo-intro.jpg") no-repeat;
+  background-size: cover;
+  background-position-x: center;
+  padding: 100px 0;
+  min-height: 690px;
+}
+
+@media (max-width: 991px) {
+  /* line 1, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro {
+    padding: 60px 0;
+  }
+}
+
+/* line 12, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__item {
+  background: white;
+  padding: 35px;
+  min-height: 420px;
+}
+
+@media (max-width: 1032px) {
+  /* line 12, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__item {
+    min-height: 471px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 996px) {
+  /* line 12, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__item {
+    min-height: 505px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* line 12, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__item {
+    margin-bottom: 30px;
+    min-height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+/* line 32, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__item--blue {
+  background: #2A3A47;
+  transition: .3s linear;
+  opacity: 0;
+}
+
+/* line 36, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__item--blue.observar--activo {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  /* line 32, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__item--blue {
+    opacity: 1;
+    margin-bottom: 0;
+  }
+}
+
+/* line 43, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__item--blue h2 {
+  color: white;
+  margin: 0;
+  font-size: 2.8em;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+@media (max-width: 1304px) {
+  /* line 43, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__item--blue h2 {
+    margin-bottom: 25px;
+  }
+}
+
+/* line 53, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__item--blue p {
+  color: white;
+  font-weight: 300;
+  margin-bottom: 5px;
+}
+
+/* line 58, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__item--blue li {
+  font-size: 1.7em;
+  font-weight: 300;
+  color: white;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+/* line 65, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__item--blue li:last-child {
+  margin-bottom: 0;
+}
+
+/* line 68, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__item--blue li img {
+  margin-right: 10px;
+}
+
+/* line 74, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 30px;
+  transition: .3s linear;
+  opacity: 0;
+}
+
+/* line 80, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__header.observar--activo {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  /* line 74, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__header {
+    opacity: 1;
+  }
+}
+
+/* line 87, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__logo {
+  margin-right: 15px;
+}
+
+@media (max-width: 543px) {
+  /* line 89, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__logo img {
+    width: 80px;
+  }
+}
+
+/* line 96, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__title h1 {
+  font-size: 5em;
+  margin: 0;
+  font-weight: 300;
+  color: #2A3A47;
+  line-height: 1.1;
+}
+
+@media (max-width: 543px) {
+  /* line 96, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__title h1 {
+    font-size: 3.4em;
+    line-height: 1;
+  }
+}
+
+/* line 106, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__title h1 span {
+  font-weight: 400;
+  display: block;
+}
+
+/* line 112, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__content {
+  margin-bottom: 64px;
+  transition: .3s linear;
+  opacity: 0;
+}
+
+/* line 116, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__content.observar--activo {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  /* line 112, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__content {
+    opacity: 1;
+    margin-bottom: 40px;
+  }
+}
+
+/* line 123, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__content p {
+  font-size: 2em;
+  font-weight: 300;
+  margin: 0;
+  color: #2A3A47;
+}
+
+@media (max-width: 543px) {
+  /* line 123, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__content p {
+    font-size: 1.8em;
+  }
+}
+
+/* line 133, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: .3s linear;
+  opacity: 0;
+}
+
+/* line 140, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__buttons.observar--activo {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  /* line 133, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__buttons {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 543px) {
+  /* line 133, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__buttons {
+    flex-direction: column;
+  }
+}
+
+/* line 149, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__buttons .btn {
+  width: 100%;
+  margin-bottom: 5px;
+}
+
+/* line 153, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__buttons p {
+  color: #2A3A47;
+  font-size: 1.4em;
+  font-weight: 300;
+  text-align: center;
+}
+
+/* line 159, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__buttons .intro-tooltip {
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  font-weight: 600;
+  align-items: center;
+  border-radius: 50%;
+  border: 1px solid #2A3A47;
+  justify-content: center;
+  outline: 0;
+  position: relative;
+  top: 1px;
+  font-size: 1.3em;
+  cursor: default;
+}
+
+/* line 175, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__btn {
+  width: 48%;
+}
+
+@media (max-width: 543px) {
+  /* line 175, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__btn {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 543px) {
+  /* line 181, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__btn--juridica {
+    margin-bottom: 0;
+  }
+}
+
+/* line 187, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__rebuttons {
+  display: flex;
+  margin-top: 30px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 1304px) {
+  /* line 187, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__rebuttons {
+    margin-top: 19px;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 187, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__rebuttons {
+    margin-top: 25px;
+  }
+}
+
+@media (max-width: 543px) {
+  /* line 187, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__rebuttons {
+    flex-direction: column;
+  }
+}
+
+/* line 202, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__borde-button {
+  padding: 10px 25px;
+  border: 2px solid white;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  transition: all ease 200ms;
+  width: 48%;
+  text-align: center;
+}
+
+@media (max-width: 543px) {
+  /* line 202, gulp-files/scss/estilos/modulos/intro.scss */
+  .intro__borde-button {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* line 217, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__borde-button:hover {
+  background: white;
+  color: #2A3A47;
+}
+
+/* line 221, gulp-files/scss/estilos/modulos/intro.scss */
+.intro__borde-button span {
+  display: block;
+}
+
+/* line 2, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__cabecera {
+  margin: 60px 0;
+  display: flex;
+  align-items: center;
+  transition: .3s linear;
+  opacity: 0;
+}
+
+/* line 8, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__cabecera.observar--activo {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  /* line 2, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__cabecera {
+    opacity: 1;
+  }
+}
+
+/* line 15, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__previa {
+  margin-bottom: 65px;
+  transition: .3s linear;
+  opacity: 0;
+}
+
+/* line 19, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__previa.observar--activo {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  /* line 15, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__previa {
+    opacity: 1;
+  }
+}
+
+/* line 25, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__previa h4 {
+  margin: 0;
+  font-size: 2em;
+  margin-bottom: 10px;
+  color: #2A3A47;
+}
+
+/* line 31, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__previa p {
+  font-size: 1.6em;
+  font-weight: 300;
+  color: #2A3A47;
+}
+
+/* line 37, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__icon {
+  margin-right: 15px;
+}
+
+@media (max-width: 543px) {
+  /* line 39, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__icon img {
+    width: 70px;
+  }
+}
+
+@media (max-width: 365px) {
+  /* line 39, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__icon img {
+    width: 60px;
+  }
+}
+
+/* line 49, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__titulo h1 {
+  font-size: 3.6em;
+  font-weight: 300;
+  margin: 0;
+  color: #2A3A47;
+}
+
+@media (max-width: 543px) {
+  /* line 49, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__titulo h1 {
+    font-size: 3.2em;
+  }
+}
+
+@media (max-width: 365px) {
+  /* line 49, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__titulo h1 {
+    font-size: 2.8em;
+  }
+}
+
+/* line 60, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__titulo h1 span {
+  font-weight: 400;
+  display: block;
+}
+
+/* line 66, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__indicador {
+  margin-bottom: 30px;
+  transition: .3s linear;
+  opacity: 0;
+}
+
+/* line 70, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__indicador.observar--activo {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  /* line 66, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__indicador {
+    opacity: 1;
+  }
+}
+
+/* line 76, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__indicador p {
+  font-size: 1.7em;
+  font-weight: 400;
+  color: #2A3A47;
+  text-align: center;
+}
+
+/* line 82, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__indicador p span.doble-linea {
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  /* line 82, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__indicador p span.doble-linea {
+    display: block;
+  }
+}
+
+/* line 91, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .numbers {
+  position: relative;
+  margin-bottom: 40px;
+  transition: .3s linear;
+  opacity: 0;
+}
+
+/* line 96, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .numbers.observar--activo {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  /* line 91, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .numbers {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 767px) {
+  /* line 91, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .numbers {
+    margin-bottom: 0;
+  }
+}
+
+/* line 105, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .numbers__movil {
+  display: none;
+}
+
+@media (max-width: 767px) {
+  /* line 105, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .numbers__movil {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+}
+
+/* line 113, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .numbers__numbers {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 767px) {
+  /* line 113, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .numbers__numbers {
+    display: none;
+  }
+}
+
+/* line 121, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .numbers__item {
+  font-size: 2.8em;
+  width: 60px;
+  height: 60px;
+  background: #F3F6F8;
+  color: #2A3A47;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  position: relative;
+  z-index: 1;
+}
+
+/* line 133, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .numbers__item.activo {
+  color: white;
+  background: #ec6300;
+}
+
+/* line 138, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .numbers__linea {
+  position: absolute;
+  background: #e6e6e6;
+  width: 95%;
+  height: 2px;
+  top: 50%;
+  left: 20px;
+}
+
+@media (max-width: 767px) {
+  /* line 138, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .numbers__linea {
+    display: none;
+  }
+}
+
+/* line 150, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__subtitle {
+  color: #EC6300;
+  font-size: 2.4em;
+  margin: 0;
+  margin-bottom: 30px;
+  text-align: center;
+  transition: .3s linear;
+  opacity: 0;
+}
+
+/* line 158, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__subtitle.observar--activo {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  /* line 150, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__subtitle {
+    opacity: 1;
+  }
+}
+
+/* line 164, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__subtitle--final {
+  color: #2A3A47;
+  text-align: left;
+  margin-bottom: 40px;
+}
+
+/* line 170, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__resubtitle {
+  font-size: 2.4em;
+  margin: 0;
+  margin-bottom: 30px;
+  color: #EC6300;
+  transition: .3s linear;
+  opacity: 0;
+  text-align: center;
+}
+
+/* line 178, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__resubtitle.observar--activo {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  /* line 170, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__resubtitle {
+    opacity: 1;
+  }
+}
+
+/* line 185, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__form {
+  transition: .3s linear;
+  opacity: 0;
+}
+
+/* line 188, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__form.observar--activo {
+  opacity: 1;
+}
+
+@media (max-width: 991px) {
+  /* line 185, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__form {
+    opacity: 1;
+  }
+}
+
+/* line 195, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form {
+  margin-bottom: 45px;
+}
+
+/* line 197, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__subtitle {
+  font-size: 2em;
+  color: #2A3A47;
+  margin: 40px 0 20px;
+}
+
+/* line 202, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__user-title {
+  font-size: 1.7em;
+  color: #2A3A47;
+  margin-bottom: 25px;
+}
+
+/* line 207, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__tooltip {
+  width: 22px;
+  height: 22px;
+  background: #A6ADB2;
+  font-size: 0.8em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  margin-left: 10px;
+}
+
+/* line 219, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__grupo[data-animacion=placeholder] {
+  margin-bottom: 2.5em;
+}
+
+/* line 222, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__grupo[data-animacion=placeholder] label.refocus {
+  opacity: 1;
+  transform: translate(0, 0) scale(0.85);
+}
+
+/* line 229, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__grupo--pass {
+  position: relative;
+}
+
+/* line 231, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__grupo--pass .show-pass {
+  position: absolute;
+  z-index: 11;
+  top: 55%;
+  right: 15px;
+  font-size: 1.8em;
+}
+
+/* line 239, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__grupo--select-span {
+  margin-bottom: 1em !important;
+}
+
+@media (max-width: 991px) {
+  /* line 239, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__grupo--select-span {
+    margin-bottom: 2em !important;
+  }
+}
+
+/* line 245, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__grupo--hidden {
+  display: none;
+}
+
+/* line 250, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__box--checks {
+  min-height: 55px;
+  margin-bottom: 20px;
+}
+
+/* line 255, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__checkbox {
+  display: inline-flex;
+  align-items: baseline;
+}
+
+@media (max-width: 543px) {
+  /* line 255, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__checkbox {
+    flex-direction: column;
+    width: 80%;
+  }
+}
+
+/* line 262, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__checkbox .check-style {
+  top: 6px;
+}
+
+@media (max-width: 543px) {
+  /* line 262, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__checkbox .check-style {
+    top: 25px;
+  }
+}
+
+/* line 268, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__checkbox label {
+  margin-left: 15px;
+  font-size: 1.7em;
+  font-weight: 300;
+}
+
+@media (max-width: 767px) {
+  /* line 268, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__checkbox label {
+    padding-right: 20px;
+  }
+}
+
+@media (max-width: 543px) {
+  /* line 268, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__checkbox label {
+    padding-left: 15px;
+    margin-right: 10px;
+  }
+}
+
+/* line 280, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__checkbox__item {
+  top: 5px;
+  border: 1px solid #A6ADB2;
+  border-radius: 0;
+}
+
+@media (max-width: 543px) {
+  /* line 280, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__checkbox__item {
+    top: 24px;
+  }
+}
+
+/* line 289, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__checkbox--long input {
+  top: 7px;
+}
+
+@media (max-width: 543px) {
+  /* line 289, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__checkbox--long input {
+    top: 24px;
+  }
+}
+
+/* line 297, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__checkbox--checked .form__checkbox__item {
+  background: white;
+}
+
+/* line 299, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__checkbox--checked .form__checkbox__item:before {
+  color: #EC6300;
+  border: 1px solid #EC6300;
+  background: white;
+}
+
+/* line 309, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__checkbox .long-check {
+  width: 22px;
+}
+
+@media (max-width: 1060px) {
+  /* line 309, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__checkbox .long-check {
+    width: 28px;
+  }
+}
+
+@media (max-width: 991px) {
+  /* line 309, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__checkbox .long-check {
+    width: 18px;
+  }
+}
+
+/* line 317, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__checkbox .long-check:before {
+  right: -2px;
+}
+
+/* line 322, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form .text, .pasos .form select {
+  background: white;
+  font-size: 1.6rem;
+  color: #333;
+  padding: 12px 10px;
+  border: 0;
+  border-bottom: 1px solid #ccc;
+  border-radius: 0;
+}
+
+/* line 330, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form .text.invalido, .pasos .form select.invalido {
+  border-color: #ea5233;
+}
+
+/* line 333, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form .text.disabled, .pasos .form select.disabled {
+  background: #e7e7e7;
+  border-color: #e7e7e7;
+}
+
+/* line 338, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form label {
+  color: #333;
+  opacity: 1;
+}
+
+/* line 342, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__adicional, .pasos .form__adicional-dos {
+  color: #666;
+  font-size: 1.4em;
+  font-weight: 300;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+/* line 350, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__adicional.hide, .pasos .form__adicional-dos.hide {
+  visibility: hidden;
+}
+
+/* line 355, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__adicional--paso2 {
+  bottom: 5px;
+  position: relative;
+}
+
+@media (max-width: 991px) {
+  /* line 355, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__adicional--paso2 {
+    display: flex;
+    margin-bottom: 20px;
+    margin-top: 5px;
+    bottom: 0;
+  }
+}
+
+/* line 366, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__adicional-dos {
+  position: relative;
+  bottom: 20px;
+}
+
+/* line 370, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__buttons {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@media (max-width: 543px) {
+  /* line 370, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__buttons {
+    flex-direction: column-reverse;
+  }
+}
+
+/* line 378, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__buttons--one {
+  justify-content: flex-end;
+}
+
+/* line 381, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__buttons--paso2 {
+  margin: 40px 0;
+}
+
+/* line 385, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__volver {
+  color: #66747d;
+  font-size: 1.7em;
+  font-weight: 300;
+  text-decoration: none;
+  outline: 0;
+  display: flex;
+  align-items: center;
+  transition: all ease 200ms;
+}
+
+@media (max-width: 543px) {
+  /* line 385, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__volver {
+    margin-top: 20px;
+  }
+}
+
+/* line 397, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__volver span {
+  font-size: 1.6em;
+  margin-right: 10px;
+}
+
+/* line 401, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__volver:hover {
+  color: #EC6300;
+}
+
+/* line 405, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .form__lightbox {
+  font-size: 1.5em;
+  z-index: 1;
+  background: #a6adb2;
+  color: white;
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  font-weight: 600;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  text-decoration: none;
+  outline: 0;
+  margin-left: 5px;
+  cursor: default;
+}
+
+@media (max-width: 543px) {
+  /* line 405, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos .form__lightbox {
+    position: absolute;
+    top: 25px;
+    right: 15px;
+  }
+}
+
+/* line 431, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__contenedor {
+  margin-bottom: 10px;
+}
+
+/* line 433, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__contenedor--big {
+  min-height: 110px;
+}
+
+/* line 436, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__contenedor--small {
+  margin-bottom: 65px;
+}
+
+@media (max-width: 767px) {
+  /* line 431, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__contenedor {
+    margin-bottom: 30px;
+  }
+}
+
+/* line 443, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__cedula {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+@media (max-width: 543px) {
+  /* line 443, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__cedula {
+    flex-direction: column-reverse;
+  }
+}
+
+/* line 450, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__cedula--paso6 {
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* line 454, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__cedula p {
+  color: #2A3A47;
+  font-size: 1.6em;
+  font-weight: 300;
+  padding-right: 20px;
+}
+
+@media (max-width: 543px) {
+  /* line 454, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__cedula p {
+    display: block;
+    margin-bottom: 10px;
+  }
+}
+
+/* line 466, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .btn--neutro {
+  color: #A6ADB2;
+  font-size: 1.7em;
+  font-weight: 300;
+  text-transform: uppercase;
+}
+
+/* line 471, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .btn--neutro:hover {
+  background: #EC6300;
+  border-color: #EC6300;
+  color: white;
+}
+
+/* line 476, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .btn--neutro.invalido {
+  border: 1px solid #a91e12;
+}
+
+/* line 479, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .btn--neutro.loaded {
+  background: #EC6300;
+  color: white;
+}
+
+/* line 485, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__imgcedula {
+  min-height: 235px;
+}
+
+@media (max-width: 767px) {
+  /* line 485, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__imgcedula {
+    min-height: auto;
+  }
+}
+
+/* line 491, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__imgcedula__interior {
+  background: #f3f5f4;
+  padding: 20px;
+  min-height: 270px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 501, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__imgcedula img {
+  width: 300px;
+  max-height: 230px;
+  margin: auto;
+  display: block;
+}
+
+@media (max-width: 767px) {
+  /* line 501, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__imgcedula img {
+    max-height: initial;
+  }
+}
+
+/* line 511, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .pdf-view {
+  display: none;
+}
+
+/* line 513, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .pdf-view .pdf-name {
+  font-size: 1.6em;
+  font-weight: 300;
+  color: #333;
+  padding: 0 20px;
+  width: 100%;
+  overflow: hidden;
+  word-break: break-word;
+  text-align: center;
+}
+
+/* line 523, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .pdf-view .fln-pdf-light {
+  font-size: 5em;
+  color: #333;
+}
+
+/* line 527, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos .pdf-view.vista-pdf {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background: #f3f5f4;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column-reverse;
+}
+
+/* line 538, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__docs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #F3F6F8;
+  padding: 10px;
+  margin-bottom: 20px;
+  transition: all ease 200ms;
+  text-decoration: none;
+  outline: 0;
+}
+
+/* line 548, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__docs:hover {
+  background: white;
+  border-color: #EC6300;
+  box-shadow: 0 5px 10px rgba(236, 99, 0, 0.3);
+}
+
+/* line 552, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__docs:hover p, .pasos__docs:hover span {
+  color: #EC6300;
+}
+
+/* line 556, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__docs__interior {
+  display: flex;
+}
+
+/* line 559, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__docs p {
+  font-size: 1.7em;
+  font-weight: 300;
+  color: #2A3A47;
+}
+
+/* line 564, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__docs__check {
+  color: #2A3A47;
+  font-size: 2.2em;
+  margin-right: 15px;
+}
+
+/* line 569, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__docs__pdf {
+  color: #2A3A47;
+  font-size: 2.3em;
+}
+
+/* line 574, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__qr {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  top: -36px;
+}
+
+@media (max-width: 991px) {
+  /* line 574, gulp-files/scss/estilos/modulos/pasos.scss */
+  .pasos__qr {
+    top: 0;
+  }
+}
+
+/* line 584, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__qr-info {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* line 588, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__qr-info__izq {
+  margin-right: 20px;
+}
+
+/* line 590, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__qr-info__izq p {
+  font-size: 1.5em;
+  color: #2A3A47;
+}
+
+/* line 594, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__qr-info__izq span {
+  font-weight: 600;
+}
+
+/* line 599, gulp-files/scss/estilos/modulos/pasos.scss */
+.pasos__tooltip {
+  width: 22px;
+  height: 22px;
+  background: #A6ADB2;
+  font-size: 0.8em;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #fff;
+  margin-left: 10px;
+  outline: 0;
+}
+
+/* line 615, gulp-files/scss/estilos/modulos/pasos.scss */
+.clonar__container-btn {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+/* line 621, gulp-files/scss/estilos/modulos/pasos.scss */
+.clonar__btn {
+  border: 1px solid #ec6300;
+  padding: 10px 20px;
+  color: #2A3A47;
+  font-size: 1.7em;
+  text-decoration: none;
+  font-weight: 300;
+  outline: 0;
+  transition: all ease 300ms;
+}
+
+/* line 630, gulp-files/scss/estilos/modulos/pasos.scss */
+.clonar__btn:hover {
+  background: #ec6300;
+  color: white;
+}
+
+@media (max-width: 543px) {
+  /* line 621, gulp-files/scss/estilos/modulos/pasos.scss */
+  .clonar__btn {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* line 639, gulp-files/scss/estilos/modulos/pasos.scss */
+.clonar__box {
+  margin-bottom: 40px;
+}
+
+/* line 645, gulp-files/scss/estilos/modulos/pasos.scss */
+.intro-tooltip--interior {
+  position: absolute;
+  right: -25px;
+  top: 2px;
+  font-size: 1.5em;
+  z-index: 1;
+  background: #A6ADB2;
+  color: white;
+  display: inline-flex;
+  width: 20px;
+  height: 20px;
+  font-weight: 600;
+  align-items: center;
+  border-radius: 50%;
+  justify-content: center;
+  outline: 0;
+  cursor: default;
+}
+
+@media (max-width: 767px) {
+  /* line 645, gulp-files/scss/estilos/modulos/pasos.scss */
+  .intro-tooltip--interior {
+    right: 0;
+  }
+}
+
+@media (max-width: 543px) {
+  /* line 645, gulp-files/scss/estilos/modulos/pasos.scss */
+  .intro-tooltip--interior {
+    right: 0;
+    top: 23px;
+  }
+}
+
+/*# sourceMappingURL=estilos.css.map */

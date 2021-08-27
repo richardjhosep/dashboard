@@ -1,0 +1,266 @@
+<html lang="es">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <title>Hazte Cliente - Sartor</title>
+  </head>
+  <body style="background-color:#eceff1;">
+    <style>
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:300;
+        src:local("Roboto Light"),
+        local("Roboto-Light")
+        ,url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmSU5fCRc4EsA.woff2) 
+        format("woff2");unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:300;
+        src:local("Roboto Light"),
+        local("Roboto-Light"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmSU5fABc4EsA.woff2) 
+        format("woff2");unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:300;
+        src:local("Roboto Light"),
+        local("Roboto-Light"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmSU5fCBc4EsA.woff2) 
+        format("woff2");unicode-range:U+1F00-1FFF}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:300;
+        src:local("Roboto Light"),
+        local("Roboto-Light"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmSU5fBxc4EsA.woff2) 
+        format("woff2");unicode-range:U+0370-03FF}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:300;
+        src:local("Roboto Light"),
+        local("Roboto-Light"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmSU5fCxc4EsA.woff2) 
+        format("woff2");unicode-range:U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:300;
+        src:local("Roboto Light"),
+        local("Roboto-Light"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmSU5fChc4EsA.woff2) 
+        format("woff2");unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:300;
+        src:local("Roboto Light"),
+        local("Roboto-Light"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmSU5fBBc4.woff2) 
+        format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:400;
+        src:local("Roboto"),
+        local("Roboto-Regular"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu72xKOzY.woff2) 
+        format("woff2");unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:400;
+        src:local("Roboto"),
+        local("Roboto-Regular"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu5mxKOzY.woff2) 
+        format("woff2");unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:400;
+        src:local("Roboto"),
+        local("Roboto-Regular"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu7mxKOzY.woff2) 
+        format("woff2");unicode-range:U+1F00-1FFF}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:400;
+        src:local("Roboto"),
+        local("Roboto-Regular"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4WxKOzY.woff2) 
+        format("woff2");unicode-range:U+0370-03FF}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:400;
+        src:local("Roboto"),
+        local("Roboto-Regular"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu7WxKOzY.woff2) 
+        format("woff2");unicode-range:U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:400;
+        src:local("Roboto"),
+        local("Roboto-Regular"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu7GxKOzY.woff2) 
+        format("woff2");unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:400;
+        src:local("Roboto"),
+        local("Roboto-Regular"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOmCnqEu92Fr1Mu4mxK.woff2) 
+        format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}
+      @font-face{
+        font-family:\'Roboto\';
+        font-style:normal;
+        font-weight:500;
+        src:local("Roboto Medium"),
+        local("Roboto-Medium"),
+        url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fCRc4EsA.woff2) 
+        format("woff2");unicode-range:U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F}
+      @font-face{font-family:\'Roboto\';font-style:normal;font-weight:500;src:local("Roboto Medium"),local("Roboto-Medium"),url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fABc4EsA.woff2) format("woff2");unicode-range:U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116}@font-face{font-family:\'Roboto\';font-style:normal;font-weight:500;src:local("Roboto Medium"),local("Roboto-Medium"),url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fCBc4EsA.woff2) format("woff2");unicode-range:U+1F00-1FFF}@font-face{font-family:\'Roboto\';font-style:normal;font-weight:500;src:local("Roboto Medium"),local("Roboto-Medium"),url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fBxc4EsA.woff2) format("woff2");unicode-range:U+0370-03FF}@font-face{font-family:\'Roboto\';font-style:normal;font-weight:500;src:local("Roboto Medium"),local("Roboto-Medium"),url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fCxc4EsA.woff2) format("woff2");unicode-range:U+0102-0103, U+0110-0111, U+1EA0-1EF9, U+20AB}@font-face{font-family:\'Roboto\';font-style:normal;font-weight:500;src:local("Roboto Medium"),local("Roboto-Medium"),url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fChc4EsA.woff2) format("woff2");unicode-range:U+0100-024F, U+0259, U+1E00-1EFF, U+2020, U+20A0-20AB, U+20AD-20CF, U+2113, U+2C60-2C7F, U+A720-A7FF}@font-face{font-family:\'Roboto\';font-style:normal;font-weight:500;src:local("Roboto Medium"),local("Roboto-Medium"),url(https://fonts.gstatic.com/s/roboto/v19/KFOlCnqEu92Fr1MmEU9fBBc4.woff2) format("woff2");unicode-range:U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD}*{-moz-box-sizing:border-box;box-sizing:border-box;padding:0;margin:0}*:before,*:after{-moz-box-sizing:border-box;box-sizing:border-box}html{font-size:10px}@media (max-width: 768px){html{font-size:8px}}body{font-family:Arial, sans-serif}.container{padding:0 30px}@media (max-width: 768px){.container{padding:0 15px}}.row{margin:0 -15px}.col{padding:15px}@media (max-width: 768px){.col{display:block;width:100%;padding:15px 0}}@media (max-width: 768px){table{width:100%}}table img{max-width:100%}table[width] h1,table[width] .h1,table[width] h2,table[width] .h2,table[width] h3,table[width] .h3,table[width] h4,table[width] .h4,table[width] h5,table[width] .h5,table[width] h6,table[width] .h6{font-family:"Roboto",sans-serif;color:#000;font-weight:400;line-height:1.25}table[width] h1,.h1{font-size:4.1rem}@media (max-width: 767px){table[width] h1,.h1{font-size:3.1rem}}table[width] h1.titulo-hero,.h1.titulo-hero{font-size:6.1rem}@media (max-width: 767px){table[width] h1.titulo-hero,.h1.titulo-hero{font-size:4.3rem}}table[width] h2,.h2{font-size:3.6rem}@media (max-width: 767px){table[width] h2,.h2{font-size:2.8rem}}table[width] h3,.h3{font-size:3.1rem}@media (max-width: 767px){table[width] h3,.h3{font-size:2.5rem}}table[width] h4,.h4{font-size:2.6rem}@media (max-width: 767px){table[width] h4,.h4{font-size:2.2rem}}table[width] h5,.h5{font-size:2.1rem}@media (max-width: 767px){table[width] h5,.h5{font-size:1.9rem}}table[width] h6,.h6{font-size:1.6rem}@media (max-width: 767px){table[width] h6,.h6{font-size:1.6rem}}p,.p{font-size:1.6rem;color:#546e7a;line-height:1.5;font-weight:400}p small,.p small{color:#698998}</style>
+    <style>
+      table[width] {
+        width: 100%;
+        max-width: 650px;
+      }
+      table table {
+        width: 100%;
+      }
+    </style>
+    <table width="100%" cellpadding="0" cellspacing="0" style="max-width:100%">
+      <tr>
+        <td style="height: 30px;;"></td>
+      </tr>
+    </table>
+    <center>
+      <table class="tabla__padre" width="650" border="0" cellpadding="0" cellspacing="0" style="background-color:#ffffff; overflow:hidden;">
+        <tr>
+          <td width="590">
+            <table class="tabla" width="650" border="0" cellpadding="0" cellspacing="0" style="">
+              <tr>
+                <td valign="middle" style="padding: 0 30px">
+                  <table width="100%" cellpadding="0" cellspacing="0" style="max-width:100%">
+                    <tr>
+                      <td style="height: 30px;"></td>
+                    </tr>
+                  </table>
+                  <a href="" style="display:block;">
+                    <img src="https://www.sartor.cl/img/logo.svg" style="display:block; margin:auto;"/>
+                  </a>
+                  <table width="100%" cellpadding="0" cellspacing="0" style="max-width:100%">
+                    <tr>
+                      <td style="height: 30px;"></td>
+                    </tr>
+                  </table>
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr style="background-color:#ffffff;">
+          <td width="590">
+            <a href="https://sartor.cl/" target="_blank">
+              <img src="https://sartor.feline.cl/haztecliente/img/mail-banner.jpg" alt="" style="display:block; width:100%;">
+            </a>
+          </td>
+        </tr>
+        <tr style="background-color:#ffffff;">
+          <td style="height: 30px;"></td>
+        </tr>
+        <tr style="background-color:#ffffff;">
+          <td width="590" style="padding: 0 55px;">
+            <center>
+              <table width="590" border="0" cellpadding="0" cellspacing="0">
+                <tr>
+                  <td>
+                    <p class="h5" style="display:block; font-size:22px; font-family:Open Sans,sans-serif; text-align: center; margin-block:0; margin-inline:0; margin:0; color:#2A3A47">
+                      Martín Thomas hemos terminado el proceso
+                    </p>
+                    <table width="100%" cellpadding="0" cellspacing="0" style="max-width:100%">
+                      <tr>
+                        <td style="height: 40px;"></td>
+                      </tr>
+                    </table>
+                    <p style="display:block; font-size:15px; font-family:Open Sans,sans-serif; font-weight: 300; margin-block:0; margin-inline:0; margin:0; margin-bottom: 20px; color:#2A3A47;">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                      aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no
+                      sea takimata sanctus est Lorem ipsum dolor sit amet.  
+                    </p>
+                    <p style="display:block; font-size:15px; font-family:Open Sans,sans-serif; font-weight: 300; margin-block:0; margin-inline:0; margin:0; color:#2A3A47;">
+                      Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                      aliquyam erat.
+                    </p>
+                    <table width="100%" cellpadding="0" cellspacing="0" style="max-width:100%">
+                      <tr>
+                        <td style="height: 90px;"></td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </center>
+          </td>
+        </tr>
+        <tr style="background-color:#f5f5f5;">
+          <td width="590" style="padding: 20px 30px;">
+            <table width="590" border="0" cellpadding="0" cellspacing="0">
+              <tr>
+                <td width="150"></td>
+                <td style="text-align: center;" width="150">
+                  <a href="https://sartor.cl/" target="_blank" style="display:inline-block;margin-bottom:3px;">
+                    <img src="https://sartor.feline.cl/haztecliente/img/mail-1.png" alt="">
+                  </a>
+                  <p style="font-size:9px;font-weight:300;margin:0;color:#2A3A47;">www.sartor.cl</p>
+                </td>
+                <td style="text-align: center;" width="150">
+                  <a href="tel:+56226791400" style="display:inline-block;margin-bottom:3px;">
+                    <img src="https://sartor.feline.cl/haztecliente/img/mail-2.png" alt="">
+                  </a>
+                  <p style="font-size:9px;font-weight:300;margin:0;color:#2A3A47;">+562 2679 1400</p>
+                </td>
+                <td style="text-align: center;" width="150">
+                  <a href="mailto:Contacto@sartor.cl" target="_blank" style="display:inline-block;margin-bottom:3px;">
+                    <img src="https://sartor.feline.cl/haztecliente/img/mail-3.png" alt="">
+                  </a>
+                  <p style="font-size:9px;font-weight:300;margin:0;color:#2A3A47;">Contacto</p>
+                </td>
+                <td style="text-align: center;" width="120">
+                  <a href="https://www.linkedin.com/company/sartor-investments/" target="_blank" style="display:inline-block;margin-bottom:3px;">
+                    <img src="https://sartor.feline.cl/haztecliente/img/mail-4.png" alt="">
+                  </a>
+                  <p style="font-size:9px;font-weight:300;margin:0;color:#2A3A47;">Linkedin</p>
+                </td>
+                <td width="150"></td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        <tr style="background-color:#c5cacd;">
+          <td width="590" style="padding: 10px 30px; text-align: center;">
+            <p style="font-size:12px;font-weight: 300;color:#2A3A47;margin-bottom:0;font-family:Open Sans,sans-serif;">
+              Cerro el Plomo 5420 Oficina 1301, Las Condes, Santiago, Chile.
+            </p>
+            <p style="font-size:12px;font-weight: 300;color:#2A3A47;margin-bottom:0;font-family:Open Sans,sans-serif;">
+              Todos los Derechos Reservados Sartor ©Copyright <?php echo date("Y"); ?>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </center>
+    <table width="100%" cellpadding="0" cellspacing="0" style="max-width:100%">
+      <tr>
+        <td style="height: 30px;;"></td>
+      </tr>
+    </table>
+  </body>
+</html>
